@@ -22,17 +22,8 @@
 
 namespace itk
 {
-
-#if defined( __GNUC__ )
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wattributes"
-#endif
-
+ITK_GCC_PRAGMA_DIAG_OFF("-Wattributes")
 template class IOTransformDCMTK_EXPORT DCMTKTransformIO< double >;
 template class IOTransformDCMTK_EXPORT DCMTKTransformIO< float >;
-
-#if defined( __GNUC__ )
-#pragma GCC diagnostic pop
-#endif
-
+ITK_GCC_PRAGMA_DIAG_ON("-Wattributes")
 }  // end namespace itk

@@ -106,19 +106,10 @@ private:
 #  endif
 namespace itk
 {
-
-#if defined( __GNUC__ )
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wattributes"
-#endif
-
+ITK_GCC_PRAGMA_DIAG_OFF("-Wattributes")
 extern template class IOTransformDCMTK_EXPORT_EXPLICIT DCMTKTransformIO< double >;
 extern template class IOTransformDCMTK_EXPORT_EXPLICIT DCMTKTransformIO< float >;
-
-#if defined( __GNUC__ )
-#pragma GCC diagnostic pop
-#endif
-
+ITK_GCC_PRAGMA_DIAG_ON("-Wattributes")
 } // end namespace itk
 #  undef IOTransformDCMTK_EXPORT_EXPLICIT
 #endif
